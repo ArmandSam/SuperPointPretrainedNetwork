@@ -140,7 +140,7 @@ class SuperPointFrontend(object):
     self.net = SuperPointNet()
     if cuda:
       # Train on GPU, deploy on GPU.
-      self.net.load_state_dict(torch.load(weights_path))
+      self.net.load_state_dict(torch.load(weights_path, weights_only= True))
       self.net = self.net.cuda()
     else:
       # Train on GPU, deploy on CPU.
