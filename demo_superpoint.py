@@ -715,7 +715,7 @@ if __name__ == '__main__':
         print('Quitting, \'q\' pressed.')
         break
 
-    # Optionally write images to disk.
+    # Optionally write images to repo_disk.
     if opt.write:
       out_file = os.path.join(opt.write_dir, 'frame_%05d.png' % vs.i)
       print('Writing image to %s' % out_file)
